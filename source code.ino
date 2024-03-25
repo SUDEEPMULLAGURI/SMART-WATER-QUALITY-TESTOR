@@ -52,6 +52,8 @@ void setup() {
 }
 
 void loop() {
+  digitalWrite(red_led,red_status);
+  digitalWrite( green_led ,green_status );
   static unsigned long analogSampleTimepoint = millis();
   if (millis() - analogSampleTimepoint > 40U) { //every 40 milliseconds, read the analog value from the ADC
     analogSampleTimepoint = millis();
